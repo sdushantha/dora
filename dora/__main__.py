@@ -4,9 +4,8 @@ import signal
 import sys
 from shutil import which
 import argparse
-from dora.printer import Printer 
-
 import os
+from dora.printer import Printer 
 
 
 def ripgrep(regex, path, rg_path, rg_arguments, rg_args_from_json_data):
