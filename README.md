@@ -1,10 +1,19 @@
-<h1 align=center><code>dora</code></h1></code>
 <p align=center>
-  <img src="images/dora_small.png"/>
+  <img src="images/dora_small.png" width="50%"/>
+  <img src="images/preview.png"/>
 </p>
 
+
+## Features
+- Blazing fast as we are using `ripgrep` in backend
+- Exploit/PoC steps for many of the API key, allowing to write a good report for bug bounty hunting
+- Unlike many other API key finders, `dora` also shows the path to the file and the line with context for easier analysis
+- Can easily be implemented into scripts. See [Example Use Cases](#Example Use Cases)
+
 ## Installation
-###
+
+**Make sure to install [ripgrep](https://github.com/BurntSushi/ripgrep)**
+
 ```console
 # clone the repo
 $ git clone https://github.com/sdushantha/dora.git
@@ -37,6 +46,11 @@ optional arguments:
 ```
 [![Open in Cloud Shell](https://user-images.githubusercontent.com/27065646/92304704-8d146d80-ef80-11ea-8c29-0deaabb1c702.png)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/sdushantha/dora)
 [![Run on Repl.it](https://user-images.githubusercontent.com/27065646/92304596-bf719b00-ef7f-11ea-987f-2c1f3c323088.png)](https://repl.it/github/sdushantha/dora)
+
+## Example Use Cases 
+1. Decompile an APK using `apktool` and run `dora` to find exposed API keys
+2. Scan GitHub repos by cloning it and allowing `dora` to scan it
+3. While scraping sites, run `dora` to scan for API keys
 
 ## Contributing
 You are more than welcome to contribute in one of the following ways:
