@@ -4,7 +4,7 @@
 </p>
 
 ## Installation
-
+###
 ```console
 # clone the repo
 $ git clone https://github.com/sdushantha/dora.git
@@ -12,14 +12,14 @@ $ git clone https://github.com/sdushantha/dora.git
 # change the working directory to sherlock
 $ cd dora 
 
-# install the requirements
-$ python3 -m pip install -r requirements.txt
+# install dora
+$ python3 setup.py install --user
 ```
 
 ## Usage
 
 ```console
-$ python3 dora --help
+$ dora --help
 usage: dora [options]
 
 positional arguments:
