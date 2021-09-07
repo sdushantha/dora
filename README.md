@@ -8,7 +8,7 @@
 - Blazing fast as we are using `ripgrep` in backend
 - Exploit/PoC steps for many of the API key, allowing to write a good report for bug bounty hunting
 - Unlike many other API key finders, `dora` also shows the path to the file and the line with context for easier analysis
-- Can easily be implemented into scripts. See [Example Use Cases](#Example Use Cases)
+- Can easily be implemented into scripts. See [Example Use Cases](https://github.com/sdushantha/dora#example-use-cases)
 
 ## Installation
 
