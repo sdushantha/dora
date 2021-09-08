@@ -1,5 +1,5 @@
+<h1 align=center><code>dora</code></h1>
 <p align=center>
-  <img src="images/dora_small.png" width="50%"/>
   <img src="images/preview.png"/>
 </p>
 
