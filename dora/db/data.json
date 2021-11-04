@@ -173,5 +173,19 @@
     },
     "Twilio API Key":{
         "regex": "(?i)twilio(.{0,20})?SK[0-9a-f]{32}"
+    },
+    "MongoDB Cloud Connection String":{
+        "regex": "mongodb\\+srv:\/\/(.*)"
+    },
+    "Riot Games Developer API Key":{
+        "regex": "RGAPI-[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"
+    },
+    "SerpAPI":{
+        "regex": "[a-f0-9]{64}",
+        "info": "Google Search API: https://serpapi.com/"
+    },
+    "Common_Pattern":{
+        "regex": "[a-fA-F0-9_-]{16,64}",
+        "info": "Look for common API key patterns in addition to loading regex data from JSON. Can yield false-positives"
     }
 }

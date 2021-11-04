@@ -79,6 +79,13 @@ def main():
                         help="Don't show color in terminal output"
                         )
 
+    parser.add_argument("--common-patterns",
+                        action="store_true",
+                        default=False,
+                        help="Look for common API key patterns in addition to loading regex data from JSON. \
+                            Can yield false-positives."
+                        )
+
     args = parser.parse_args()
 
     # Catch SIGINT (also known as CTRL-C) and exit gracefully
@@ -91,6 +98,7 @@ def main():
     rg_path = args.rg_path
     rg_arguments = args.rg_arguments
     verbose = args.verbose
+    common_patterns = args.common_patterns
 
     # Create a printer object for displaying text.
     # We are making this global because exit_gracefully() also
@@ -122,6 +130,10 @@ def main():
         for item in data:
             regex = item.strip()
             service_name = item
+
+            if "Common_Pattern" in service_name and (not common_patterns):
+                continue
+
             regex = data.get(service_name).get("regex")
             # Awfully long variable name, I know. I'm open for suggestions.
             rg_args_from_json_data = data.get(service_name).get("flags")
