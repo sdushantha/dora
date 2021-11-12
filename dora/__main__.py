@@ -122,6 +122,7 @@ def main():
         for item in data:
             regex = item.strip()
             service_name = item
+
             regex = data.get(service_name).get("regex")
             # Awfully long variable name, I know. I'm open for suggestions.
             rg_args_from_json_data = data.get(service_name).get("flags")
