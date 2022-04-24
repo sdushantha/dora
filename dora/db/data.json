@@ -183,5 +183,8 @@
     "SerpAPI":{
         "regex": "[a-f0-9]{64}",
         "info": "Google Search API: https://serpapi.com/"
+    },
+    "Amazon Web Services Simple Storage (AWS S3) URL":{
+        "regex": "[https://]*s3\\.amazonaws.com[/]+.*|[a-zA-Z0-9_-]*\\.s3\\.am"
     }
 }
