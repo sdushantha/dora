@@ -72,8 +72,9 @@
     "Square Access Token": {
         "regex": "sqOatp-[0-9A-Za-z\\-_]{22}"
     },
-    "Square OAuth Secret": {
-        "regex": "sq0csp-[ 0-9A-Za-z\\-_]{43}"
+    "Square Application Secret": {
+        "regex": "sandbox-?sq0csp-[0-9A-Za-z-_]{43}|sq0[a-z]{3}-[0-9A-Za-z-_]{22,43}",
+        "info": "Use the command below to verify that the secret is valid:\n  $ curl \"https://squareup.com/oauth2/revoke\" -d '{\"access_token\":\"RANDOM_STRING_HERE\",\"client_id\":\"APP_ID_HERE\"}'  -H \"Content-Type: application/json\" -H \"Authorization: Client SECRET_HERE\"\n"
     },
     "PayPal/Braintree Access Token": {
         "regex": "access_token\\$production\\$[0-9a-z]{16}\\$[0-9a-f]{32}"
