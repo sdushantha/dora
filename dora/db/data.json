@@ -42,13 +42,16 @@
         "regex": "(?i)twitter(.{0,20})?['\\\"][0-9a-z]{18,25}['\\\"]"
     },
     "Github Personal Access Token": {
-        "regex": "ghp_[0-9a-zA-Z]{36}"
+        "regex": "ghp_[0-9a-zA-Z]{36}",
+        "info": "Use the command below to verify that the access token is valid:\n  $ curl -s -u \"user:TOKEN_HERE\" https://api.github.com/user\n  curl -s -H \"Authorization: token TOKEN_HERE\" \"https://api.github.com/users/[USERNAME]/orgs\"\n . # Check scope of your api token\n $  curl \"https://api.github.com/rate_limit\" -i -u \"user:TOKEN_HERE\" | grep \"X-OAuth-Scopes:\"\n"
     },
     "Github OAuth Access Token": {
-        "regex": "gho_[0-9a-zA-Z]{36}"
+        "regex": "gho_[0-9a-zA-Z]{36}",
+        "info": "Use the command below to verify that the access token is valid:\n  $ curl -s -u \"user:TOKEN_HERE\" https://api.github.com/user\n  curl -s -H \"Authorization: token TOKEN_HERE\" \"https://api.github.com/users/[USERNAME]/orgs\"\n . # Check scope of your api token\n $  curl \"https://api.github.com/rate_limit\" -i -u \"user:TOKEN_HERE\" | grep \"X-OAuth-Scopes:\"\n"
     },
     "Github App Token": {
-        "regex": "(ghu|ghs)_[0-9a-zA-Z]{36}"
+        "regex": "(ghu|ghs)_[0-9a-zA-Z]{36}",
+        "info": "Use the command below to verify that the app token is valid:\n  $ curl -s -u \"user:TOKEN_HERE\" https://api.github.com/user\n  curl -s -H \"Authorization: token TOKEN_HERE\" \"https://api.github.com/users/[USERNAME]/orgs\"\n . # Check scope of your api token\n $  curl \"https://api.github.com/rate_limit\" -i -u \"user:TOKEN_HERE\" | grep \"X-OAuth-Scopes:\"\n"
     },
     "Github Refresh Token": {
         "regex": "ghr_[0-9a-zA-Z]{76}"
