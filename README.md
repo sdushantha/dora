@@ -44,8 +44,6 @@ optional arguments:
                         Display extra debugging information
   --no-color            Don't show color in terminal output
 ```
-[![Open in Cloud Shell](https://user-images.githubusercontent.com/27065646/92304704-8d146d80-ef80-11ea-8c29-0deaabb1c702.png)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/sdushantha/dora)
-[![Run on Repl.it](https://user-images.githubusercontent.com/27065646/92304596-bf719b00-ef7f-11ea-987f-2c1f3c323088.png)](https://repl.it/github/sdushantha/dora)
 
 ## Example Use Cases 
 1. Decompile an APK using `apktool` and run `dora` to find exposed API keys
