@@ -42,13 +42,16 @@
         "regex": "(?i)twitter(.{0,20})?['\\\"][0-9a-z]{18,25}['\\\"]"
     },
     "Github Personal Access Token": {
-        "regex": "ghp_[0-9a-zA-Z]{36}"
+        "regex": "ghp_[0-9a-zA-Z]{36}",
+        "info": "Use the command below to verify that the access token is valid:\n  $ curl -s -u \"user:TOKEN_HERE\" https://api.github.com/user\n  curl -s -H \"Authorization: token TOKEN_HERE\" \"https://api.github.com/users/[USERNAME]/orgs\"\n . # Check scope of your api token\n $  curl \"https://api.github.com/rate_limit\" -i -u \"user:TOKEN_HERE\" | grep \"X-OAuth-Scopes:\"\n"
     },
     "Github OAuth Access Token": {
-        "regex": "gho_[0-9a-zA-Z]{36}"
+        "regex": "gho_[0-9a-zA-Z]{36}",
+        "info": "Use the command below to verify that the access token is valid:\n  $ curl -s -u \"user:TOKEN_HERE\" https://api.github.com/user\n  curl -s -H \"Authorization: token TOKEN_HERE\" \"https://api.github.com/users/[USERNAME]/orgs\"\n . # Check scope of your api token\n $  curl \"https://api.github.com/rate_limit\" -i -u \"user:TOKEN_HERE\" | grep \"X-OAuth-Scopes:\"\n"
     },
     "Github App Token": {
-        "regex": "(ghu|ghs)_[0-9a-zA-Z]{36}"
+        "regex": "(ghu|ghs)_[0-9a-zA-Z]{36}",
+        "info": "Use the command below to verify that the app token is valid:\n  $ curl -s -u \"user:TOKEN_HERE\" https://api.github.com/user\n  curl -s -H \"Authorization: token TOKEN_HERE\" \"https://api.github.com/users/[USERNAME]/orgs\"\n . # Check scope of your api token\n $  curl \"https://api.github.com/rate_limit\" -i -u \"user:TOKEN_HERE\" | grep \"X-OAuth-Scopes:\"\n"
     },
     "Github Refresh Token": {
         "regex": "ghr_[0-9a-zA-Z]{76}"
@@ -72,8 +75,9 @@
     "Square Access Token": {
         "regex": "sqOatp-[0-9A-Za-z\\-_]{22}"
     },
-    "Square OAuth Secret": {
-        "regex": "sq0csp-[ 0-9A-Za-z\\-_]{43}"
+    "Square Application Secret": {
+        "regex": "sandbox-?sq0csp-[0-9A-Za-z-_]{43}|sq0[a-z]{3}-[0-9A-Za-z-_]{22,43}",
+        "info": "Use the command below to verify that the secret is valid:\n  $ curl \"https://squareup.com/oauth2/revoke\" -d '{\"access_token\":\"RANDOM_STRING_HERE\",\"client_id\":\"APP_ID_HERE\"}'  -H \"Content-Type: application/json\" -H \"Authorization: Client SECRET_HERE\"\n"
     },
     "PayPal/Braintree Access Token": {
         "regex": "access_token\\$production\\$[0-9a-z]{16}\\$[0-9a-f]{32}"
@@ -183,5 +187,12 @@
     "SerpAPI":{
         "regex": "[a-f0-9]{64}",
         "info": "Google Search API: https://serpapi.com/"
+    },
+    "Amazon Web Services Simple Storage (AWS S3) URL":{
+        "regex": "[https://]*s3\\.amazonaws.com[/]+.*|[a-zA-Z0-9_-]*\\.s3\\.am"
+    },
+    "Notion Integration Token": {
+        "regex": "(secret_)([a-zA-Z0-9]{43})",
+        "info": "A Notion API integration's internal integration token"
     }
 }
