@@ -190,5 +190,9 @@
     },
     "Amazon Web Services Simple Storage (AWS S3) URL":{
         "regex": "[https://]*s3\\.amazonaws.com[/]+.*|[a-zA-Z0-9_-]*\\.s3\\.am"
+    },
+    "Notion Integration Token": {
+        "regex": "(secret_)([a-zA-Z0-9]{43})",
+        "info": "A Notion API integration's internal integration token"
     }
 }
