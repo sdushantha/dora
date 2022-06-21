@@ -18,7 +18,7 @@
 # clone the repo
 $ git clone https://github.com/sdushantha/dora.git
 
-# change the working directory to sherlock
+# change the working directory to dora
 $ cd dora 
 
 # install dora
