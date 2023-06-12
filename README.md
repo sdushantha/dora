@@ -15,14 +15,8 @@
 **Make sure to install [ripgrep](https://github.com/BurntSushi/ripgrep)**
 
 ```console
-# clone the repo
-$ git clone https://github.com/sdushantha/dora.git
-
-# change the working directory to dora
-$ cd dora 
-
 # install dora
-$ python3 setup.py install --user
+$ pip3 install git+https://github.com/sdushantha/dora.git
 ```
 
 ## Usage
